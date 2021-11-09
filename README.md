@@ -2,11 +2,11 @@
 # Straw
 Straw is a **Node.js** web application where users can log in, post, view, edit and delete animal information , create blogs and comments, and make donation (payment) through integrated razorpay payment gateway .  
   
-Online Demo:   
+Online Demo: https://straww-2021.herokuapp.com/  
 
 
 * Implemented back-end services as **RESTful APIs** using **Express**
-* Built and connected to **MongoDB** by Mongoose to store user and campground data, and execute the related CRUD operation
+* Built and connected to **MongoDB** by Mongoose to store user , animals and blogs data, and execute the related CRUD operation
 * Created dynamic HTML with **EJS** templating
 * Handled user authentication and authorization through **Passport.js**
 * Used **session** to store data and send cookies
@@ -24,7 +24,6 @@ Online Demo:
 1. Clone the repo and install dependencies
 ```
 git clone 
-cd yelpcamp
 npm install
 ```
 2. Create a `.env` file in the root of the project and add the following (replace the contents in brackets with yours)
