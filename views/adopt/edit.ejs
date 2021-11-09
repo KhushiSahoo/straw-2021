@@ -1,0 +1,122 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="contents container">
+  <div class="row d-flex justify-content-center ">
+      <h1 class="text-center" style="background-color: #f7aa30b2; color:white;">Edit</h1>
+      <div class="col-md-6 p-3">
+         
+        <form action="/Adopt/<%=animal._id%>?_method=PUT" method="post" novalidate class= "validated-form" enctype="multipart/form-data">
+              <!--labels-->
+              <div>
+                <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" name="name"  class="form-control" value="<%=animal.name%>"><br>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+
+            <div>
+                <label for="category" class="form-label">Category:</label>
+            <input type="text" id="category" name="category"  class="form-control" value="<%=animal.category%>"><br>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            
+            <div>
+                <label for="breed" class="form-label">Breed:</label>
+            <input type="text" id="breed" name="breed"  class="form-control" value="<%=animal.breed%>"><br>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+
+            <div>
+                <label for="color" class="form-label">Color:</label>
+            <input type="text" id="color" name="color"  class="form-control"  value="<%=animal.color%>" ><br>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div>
+                <label for="gender" class="form-label">Gender:</label>
+            <input type="text" id="gender" name="gender"  class="form-control" value="<%=animal.gender%>"><br>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+
+
+            <div>
+                <label for="location" class="form-label">Location:</label>
+                <input type="text" id="location" name="location" class="form-control" value="<%=animal.location%>"><br>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+            </div>
+            <div>
+                <label for="image" class="form-label">Add Images:</label>
+                 <input type="file" name="image" id="image" multiple>
+                 <div class="valid-feedback">
+                    Looks good!
+                  </div>
+
+            </div>
+
+            <div>
+                <label for="age" class="form-label">Age:</label>
+            <input type="Number" id="age"  name="age" class="form-control" value="<%=animal.age%>"><br>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+
+            </div>
+
+            <div>
+                <label for="info" class="form-label">More Details:</label>
+                <textarea name="info" id="info" cols="30" rows="10" class="form-control" required><%=animal.info%></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+             </div>
+
+
+               <div class="m-2">
+                   <center>
+                    <button type="submit" class="btn btn-success bttn">Update animal</button>
+                    <a href="/Adopt/<%=animal._id%>" class="btn btn-primary bttn">Cancel</a>
+                </center>
+               </div>
+              
+             
+      </form>
+      
+  </div>
+      
+ </div>
+
+</div>
+
+   <!-- <h1>Edit</h1>
+   
+    <form action="/Adopt/<%=animal._id%>?_method=PUT" method="post">
+      
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="<%=animal.name%>"><br>
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" value="<%=animal.category%>"><br>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" value="<%=animal.location%>" ><br>
+            <label for="image">Image:</label>
+            <input type="text" id="image" name="image" value="<%=animal.image%>" ><br>
+            <label for="age">Age:</label>
+            <input type="Number" id="age"  name="age" value="<%=animal.age%>"><br>
+            <label for="info">info:</label>
+            <textarea name="info" id="info" cols="30" rows="10"><%=animal.info%></textarea>
+        
+        <button type="submit">Add animal</button>
+    </form>
+
+
+    <a href="/Adopt/<%=animal._id%>">Cancel</a>-->
+    

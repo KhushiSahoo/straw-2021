@@ -1,0 +1,25 @@
+<nav class="navbar sticky-top navbar-expand-md navbar-light bg-light">
+    <div class="container-fluid navi">
+      <a class="navbar-brand" href="#">STRAW</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav mx-auto">
+          <a class="nav-link mx-2 px-2"href="/">Home</a>
+          <a class="nav-link mx-2 px-2" href="/Donate">Donate</a>
+          <a class="nav-link mx-2 px-2" href="/Adopt">Adopt</a>
+          <a class="nav-link mx-2 px-2" href="/Blog">Blog</a>
+          <a class="nav-link mx-2 px-2" href="/Join">Join us</a>
+        </div>
+        <div class="navbar-nav ms-auto btttn">
+          <% if(!currentUser) {%>
+            <button type="button" class="btn btn-outline-secondary btn-sm mx-1"> <a class="nav-link" href="/Login">Login</a></button>
+            <button type="button" class="btn btn-outline-secondary btn-sm mx-1"> <a class="nav-link" href="/Register">Register</a></button>
+            <% } else{ %>
+            <button type="button" class="btn btn-outline-secondary btn-sm"> <a class="nav-link" href="/Logout">Logout</a></button>
+            <% } %>
+        </div>
+      </div>
+    </div>
+  </nav> 

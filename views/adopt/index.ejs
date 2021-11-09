@@ -1,0 +1,143 @@
+ <% layout('layouts/boilerplate') %>
+ <div class="heading headAdopt">
+   <div class="container heado">
+     <center>
+     <h2><span>STRAW/ADOPT</span></h2>
+     <h3 class="p-2">
+       When you’re ready to show love, they’re ready to give it.
+     </h3>
+   </center>
+   </div>
+<!--heading end-->    
+</div>
+
+<!--content section-->
+<div class="contents container">
+   <center>
+       <div class="donatetext">
+           <h2>Lost or found pet?</h2>
+
+          <p>
+          Call: 977XX$%XX , 789XXX90XX
+          </p>
+          
+         </div>
+       <h2 class="adopt">Adoptable animals</h2>
+       <div class="all p-2">
+           <div class="row d-flex justify-content-center mx-0 my-3 m-xs-3" onclick="location.href='Adopt/new';" style="cursor: pointer;">
+               <div class="col-lg-4 capsule d-flex news-content py-2 link ">
+                  <span m-auto>Add Animal</span>
+                   
+               </div>
+             </div>
+         </div>
+
+<!--see by categories-->
+<h2 class="adopt">See by categories</h2>
+<div class="row g-2">
+  <div class="col-md-4">
+    <div class="all p-2">
+      <div class="row d-flex justify-content-center mx-0 my-3 m-xs-3" onclick="location.href='/adopt';" style="cursor: pointer;">
+          <div class="col-12 capsule d-flex news-content py-2 link ">
+             <span m-auto>All Animal(s)</span>
+              
+          </div>
+        </div>
+    </div>
+    
+  </div>
+  <div class="col-md-4">
+    <div class="all p-2">
+      <div class="row d-flex justify-content-center mx-0 my-3 m-xs-3" onclick="location.href=' /adopt?category=cat';" style="cursor: pointer;">
+          <div class="col-12 capsule d-flex news-content py-2 link ">
+             <span m-auto>All Cat(s)</span>
+              
+          </div>
+        </div>
+    </div>
+    
+  </div>
+  <div class="col-md-4">
+    <div class="all p-2">
+      <div class="row d-flex justify-content-center mx-0 my-3 m-xs-3" onclick="location.href='/adopt?category=dog';" style="cursor: pointer;">
+          <div class="col-12 capsule d-flex news-content py-2 link ">
+             <span m-auto>All Dog(s)</span>
+              
+          </div>
+        </div>
+    </div>
+    
+  </div>
+</div>
+         
+
+       <!--displaying all-->
+       <div class="row g-4">
+           <!--row start-->
+           <%   for(let animal of animals){ %>
+           <div class="col-lg-4 col-md-6 col-sm-12">
+             <div class="card mb-5 shadow-sm">
+               <img alt="Card image cap" class="card-img-top img-fluid" src="<%=animal.images[0].url%>" />
+               
+   
+               <div class="card-body">
+                 <div class="card-title">
+                   <h2><%=animal.name%></h2>
+                 </div>
+                 <div class="card-text">
+                   <p>
+                    Category: <%=animal.category%><br>
+                    Breed: <%=animal.breed%> <br>
+                     <small class="text-muted"><%=animal.location%></small>
+
+                    
+                   </p>
+                 </div>
+                 <a href="adopt/<%=animal._id%>" class="btn btn-outline-primary rounded-0 float-end bttn"
+                   >Read More</a
+                 >
+               </div>
+             </div>
+           </div>
+           
+           <% } %>
+           
+           <!--row end-->
+         </div>
+
+         <!--adoption rules-->
+         <div class="donatetext p-2 my-2">
+           <h2>After you adopt</h2>
+
+          <p>
+           Thank you for adopting your companion from STRAWS and giving a homeless animal a second chance! If you need advice or
+            guidance along the way or simply want to let us know how your new companion is settling in, we are here for you.
+          </p>
+          
+         </div>
+
+   </center>
+   <div class="container foot">
+       <h5>contact us:</h5>
+   </div>
+   
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

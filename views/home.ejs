@@ -1,0 +1,198 @@
+<% layout('layouts/boilerplate') %>
+<div class="heading">
+    <div class="container heado">
+      <center>
+      <h2><span>STRAW</span></h2>
+      <h3 class="p-2">envisions a world where all people recognize the intrinsic value of animals
+        and consistently make choices that demonstrate compassion and respect.
+      </h3>
+    </center>
+    </div>
+     
+  </div>
+  <div class="contents">
+      <center>
+          <h2 class="adopt">Adoptable animals</h2>
+      
+      <div class="container">
+          <div class="row g-4">
+            <%const animuls = animals.slice(0,4); %>
+            <% for(let animal of animuls){ %>
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card mb-5 shadow-sm">
+                  <img alt="Card image cap" class="card-img-top img-fluid" src="<%=animal.images[0].url%>" />
+                  
+      
+                  <div class="card-body">
+                    <div class="card-title">
+                      <h2><%=animal.name%></h2>
+                    </div>
+                    <div class="card-text">
+                      <p>
+                       Category: <%=animal.category%><br>
+                       Breed: <%=animal.breed%> <br>
+                        <small class="text-muted"><%=animal.location%></small>
+   
+                       
+                      </p>
+                    </div>
+                    <a href="adopt/<%=animal._id%>" class="btn btn-outline-primary rounded-0 float-end bttn"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
+              </div>
+              
+              <% } %>
+              
+          </div>
+      </div>
+      <div class="all p-4">
+        <div class="row d-flex justify-content-center mx-0 my-3 m-xs-3" onclick="location.href='/Adopt';" style="cursor: pointer;">
+            <div class="col-lg-4 capsule d-flex news-content py-2 link ">
+               <span m-auto>All Animals</span>
+                
+            </div>
+          </div>
+      </div>
+      <div class=" container hero">
+        <h2 class="adopt">Be Hero</h2>
+        <div class="row g-2">
+          <!--row start-->
+          <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="card mb-5 shadow-sm">
+              <img alt="Card image cap" class="card-img-top img-fluid" src="/images/header7.jpg" />
+              
+  
+              <div class="card-body bowdy">
+                <div class="card-title">
+                  <h2>Reach them</h2>
+                </div>
+                <div class="card-text">
+                  <p>
+                    You can be a hero to an animal in need.
+                    Your gift today will make difference for animals in need.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="card mb-5 shadow-sm">
+              <img alt="Card image cap" class="card-img-top img-fluid" src="/images/header.jpg" />
+  
+              <div class="card-body bowdy">
+                <div class="card-title">
+                  <h2>Fund Raising</h2>
+                </div>
+                <div class="card-text">
+                  <p>
+                    Do you enjoy events that are as meaningful as they are fun? You can host your 
+                    own event to benefit the animals. From bake sales to personalized online fundraisers, start planning today. It’s easy!
+  
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--row end-->
+        </div>
+        <div class="donatetext">
+          <h2>Give today</h2>
+
+         <p>
+          Your gift today will give critical care to abandoned, injured and orphaned animals right now, in their time of need.
+         </p>
+         
+        </div>
+        <div class="all p-4">
+          <div class="row d-flex justify-content-center mx-0 my-3 m-xs-3" onclick="location.href='/Donate';" style="cursor: pointer;">
+              <div class="col-lg-4 capsule d-flex news-content py-2 link ">
+                 <span m-auto>Donate Now</span>
+                  
+              </div>
+            </div>
+        </div>
+      </div>
+    </center>
+    <div class="joinus">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="bgimg volunteer">
+            <div class="textinside">
+              <h2>Volunteering</h2>
+              <p>Looking to invest in yourself while making a difference for animals? Check out the many volunteer opportunities at STRAW!</p>
+              
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="bgimg youth">
+            <div class="textinside">
+              <h2>Virtual Youth program</h2>
+
+              <p>
+                Learn about pets and wild animals during live virtual workshops for youth ages 7-13. 
+                Featuring fun and engaging activities, youth will be inspired to protect animals in our communities and around the world.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--row ends-->
+      </div>
+      <div class="all p-4">
+        <div class="row d-flex justify-content-center mx-0 my-3 m-xs-3" onclick="location.href='/Join';" style="cursor: pointer;">
+            <div class="col-lg-4 capsule d-flex news-content py-2 link ">
+               <span m-auto>Join us</span>
+                
+            </div>
+          </div>
+      </div>
+    </div>
+    <center>
+    <div class=" container hero">
+      <h2 class="adopt">Read About</h2>
+      <div class="row g-2">
+        <!--row start-->
+        <%const blugs = blogs.slice(0,4); %>
+        <%   for(let blog of blugs){ %>
+          <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="card mb-5 shadow-sm">
+              <img alt="Card image cap" class="card-img-top img-fluid" src="<%=blog.images[0].url%>" />
+              
+   
+              <div class="card-body bowdy">
+                <div class="card-title">
+                  <h2><%=blog.title%></h2>
+                </div>
+                <div class="card-text">
+                  <p>
+                     This blog  is intended to provide you with information /suggestion about <%=blog.title%>.....
+                     <%=blog.info.slice(0 ,8)%>......<br>
+                     By : <%=blog.author.username%>
+                  </p>
+                </div>
+                <a href="blog/<%=blog._id%>" class="btn btn-outline-primary rounded-0 float-end bttn"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <% } %>
+        <!--row end-->
+      </div>
+      <div class="all p-4">
+        <div class="row d-flex justify-content-center mx-0 my-3 m-xs-3" onclick="location.href='/Blog';" style="cursor: pointer;">
+            <div class="col-lg-4 capsule d-flex news-content py-2 link ">
+               <span m-auto>Read More</span>
+                
+            </div>
+          </div>
+      </div>
+    </div>
+  </center>
+  <div class="container foot">
+    <h5>contact us:</h5>
+  </div>
+  </div>

@@ -1,0 +1,119 @@
+<% layout('layouts/boilerplate') %>
+<div class="contents container">
+  <div class="row d-flex justify-content-center ">
+      <h1 class="text-center" style="background-color: #f7aa30b2; color:white;">Volunteer Form</h1>
+      <div class="col-md-6 p-3">
+        <form action="/Join" method="post" novalidate class= "validated-form">
+          <!--fullname-->
+          <div>
+            <label for="name" class="form-label">Full name:</label>
+        <input type="text" id="name" name="name"  class="form-control" required><br>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+       
+        <!--age-->
+        <div>
+            <label for="age" class="form-label">Age:</label>
+        <input type="number" id="age" name="age"  class="form-control" required><br>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+          
+        <!--address-->
+        <div>
+            <label for="address" class="form-label">Address:</label>
+        <input type="text" id="address" name="address"  class="form-control" required><br>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+          
+
+        <!--pincode-->
+        <div>
+            <label for="pincode" class="form-label">Pincode:</label>
+        <input type="number" id="pincode" name="pincode"  class="form-control" required><br>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        
+
+        <!--email-->
+        <div>
+            <label for="email" class="form-label">Email:</label>
+        <input type="email" id="email" name="email"  class="form-control" required><br>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+
+        <!--Phone Number-->
+        <div>
+            <label for="phone" class="form-label">Phone Number:</label>
+        <input type="number" id="phone" name="phone"  class="form-control" required><br>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+
+        <!--Skill-->
+        <div>
+            <label for="skill" class="form-label">Skills:</label>
+        <input type="text" id="skill" name="skill"  class="form-control" required><br>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <!--status-->
+        <div>
+            <label for="status" class="form-label">Status :</label>
+            <select class="form-select" id="status" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="student">Student</option>
+                <option value="homemaker">Homemaker</option>
+                <option value="employed">Employed</option>
+                <option value="other">Other</option>
+              </select>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+
+        <!--agree-->
+        <div>
+            <label for="agree" class="form-label">
+                Most Volunteer oppurtunities require a recurring weekly  shift for 3 months . Are you able to Volunteer
+                on a weekly shift for this time? YES/N0 . If NO please explain.
+            </label>
+            <textarea name="agree" id="agree" cols="30" rows="10" class="form-control" required></textarea>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+         </div>
+
+           <div class="m-2">
+             <center>
+            <button type="submit" class="btn btn-success bttn">Confirm</button>
+        <a href="/Join" class="btn btn-primary bttn">Cancel</a>
+      </center>
+      </div>
+    </form>
+      </div>
+      
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+

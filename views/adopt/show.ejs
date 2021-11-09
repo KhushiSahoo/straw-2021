@@ -1,0 +1,139 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="contents container show">
+    <center>
+        <h2>MEET <%=animal.name %></h2>
+        <hr>
+      </center>
+
+        <div class="row g-4 ">
+            <div class="col-lg-4 col-md-6 ">
+              <center>
+              <div class="img"  style="background-image:linear-gradient(to bottom, rgba(157, 14, 14, 0), rgba(8, 0, 0, 0.7)) , url('<%=animal.images[0].url%>');
+              background-size: cover;
+              background-position: center;
+              background-repeat:no-repeat;
+              ">
+
+              </div>
+                
+            </div>
+          </center>
+
+         
+            <div class="col-lg-8 col-md-6  detal">
+              <!--COL STRT-->
+                
+              <div class="row">
+                <div class="col-4">
+                <h4>SPECIES:</h4>
+                </div>
+                <div class="col-8">
+                 <h4> <%=animal.category%></h4>
+                </div>
+              </div>
+
+              <div class="row ml-auto">
+                <div class="col-4">
+                <h4>BREED:</h4>
+                </div>
+                <div class="col-8 ml-auto">
+                 <h4> <%=animal.breed%></h4>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-4">
+                <h4>AGE:</h4>
+                </div>
+                <div class="col-8">
+                 <h4> <%=animal.age%> yrs</h4>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-4">
+                <h4>GENDER:</h4>
+                </div>
+                <div class="col-8">
+                 <h4> <%=animal.gender%></h4>
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-4">
+                <h4>COLOR:</h4>
+                </div>
+                <div class="col-8">
+                 <h4> <%=animal.color%></h4>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-4">
+                <h4>LOCATION:</h4>
+                </div>
+                <div class="col-8">
+                 <h4> <%=animal.location%></h4>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+             <!--cOL END-->
+            </div>
+        </div>
+        <br>
+        <hr>
+
+        <h5 class="info">
+            <%=animal.info%>
+        </h5>
+        <br>
+        <hr>
+        <br>
+
+        <div class="all p-2">
+          <div class="row d-flex justify-content-center mx-0 my-3 m-xs-3" onclick="location.href='/Adopt/<%=animal._id%>/contact';" style="cursor: pointer;">
+              <div class="col-lg-4 capsule d-flex news-content py-2 link ">
+                 <span m-auto>Contact Owner</span>
+                  
+              </div>
+            </div>
+        </div>
+
+        <footer>
+          
+            <% if( currentUser && animal.author.equals(currentUser._id)){ %>
+              <center>
+                <div class="d-flex justify-content-center m-2">
+
+            <a href="/Adopt/<%=animal._id%>/edit" class="btn btn-outline-secondary bttn mx-2">Edit</a>
+            
+            <form method ="post" action="/Adopt/<%=animal._id%>?_method=DELETE">
+                <button class="btn btn-outline-secondary bttn">Delete</button>
+            </form>
+          </div>
+        </center>
+            <%}%>
+        </footer>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+

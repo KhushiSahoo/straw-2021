@@ -1,0 +1,70 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="contents container">
+    <div class="row d-flex justify-content-center ">
+        <h1 class="text-center" style="background-color: #f7aa30b2; color:white;">Login</h1>
+        <div class="col-md-6 p-3">
+
+            <form action="/Login" method="post"  nonvalidate class="validated-form" >
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username : </label>
+                    <input class ="form-control" type="text" id="username" , name="username" required>
+                    <div class= "valid-feedback">
+                        Looks good!
+                    </div>
+                </div> 
+             <div class="mb-3">
+                 <label for="password" class="form-label">Password : </label>
+                 <input class ="form-control" type="password" id="password" , name="password" required>
+                 <div class= "valid-feedback">
+                     Looks good!
+                 </div>
+             </div>
+             <div class="m-2">
+                 <center>
+             <button class="btn btn-success bttn">Login</button>
+            </center>
+            </div>
+             </form>
+
+        </div>
+        
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<h1>Login</h1>
+<form action="/Login" method="post"  nonvalidate class="validated-form" >
+   <div class="mb-3">
+       <label for="username" class="form-label">Username : </label>
+       <input class ="form-control" type="text" id="username" , name="username" required>
+       <div class= "valid-feedback">
+           Looks good!
+       </div>
+   </div> 
+<div class="mb-3">
+    <label for="password" class="form-label">Password : </label>
+    <input class ="form-control" type="password" id="password" , name="password" required>
+    <div class= "valid-feedback">
+        Looks good!
+    </div>
+</div>
+<button class="btn btn-success">Login</button>
+</form>-->

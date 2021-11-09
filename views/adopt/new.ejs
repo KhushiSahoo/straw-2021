@@ -1,0 +1,102 @@
+<% layout('layouts/boilerplate') %>
+<div class="contents container">
+  <div class="row d-flex justify-content-center ">
+      <h1 class="text-center" style="background-color: #f7aa30b2; color:white;">Add Details</h1>
+      <div class="col-md-6 p-3">
+        <form action="/Adopt" method="POST" novalidate class= "validated-form" enctype="multipart/form-data">
+          <!--labels-->
+          <div>
+            <label for="name" class="form-label">Name:</label>
+        <input type="text" id="name" name="name"  class="form-control"  required><br>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+
+        <div>
+            <label for="category" class="form-label">Category:</label>
+           <input type="text" id="category" name="category"  class="form-control" required placeholder=" 'dog' or 'cat'"><br>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+
+        <div>
+            <label for="breed" class="form-label">Breed:</label>
+        <input type="text" id="breed" name="breed"  class="form-control" required><br>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+
+        <div>
+            <label for="color" class="form-label">Color:</label>
+        <input type="text" id="color" name="color"  class="form-control" required><br>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div>
+            <label for="gender" class="form-label">Gender:</label>
+        <input type="text" id="gender" name="gender"  class="form-control" required><br>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+
+
+
+
+        <div>
+            <label for="location" class="form-label">Location:</label>
+            <input type="text" id="location" name="location" class="form-control" required><br>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+        </div>
+        
+        <div>
+            <input type="file" name="image" id="">
+             <div class="valid-feedback">
+                Looks good!
+              </div>
+
+        </div>
+
+
+        <div>
+            <label for="age" class="form-label">Age:</label>
+        <input type="Number" id="age"  name="age" class="form-control" required><br>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+
+        </div>
+
+        <div>
+            <label for="info" class="form-label">More Details:</label>
+            <textarea name="info" id="info" cols="30" rows="10" class="form-control" required></textarea>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+         </div>
+
+              
+               <center class="m-2">
+                <button type="submit" class="btn btn-success bttn">Add animal</button>
+                <a href="/Adopt" class="btn btn-primary bttn">Cancel</a>
+      </center>
+  </div>
+      </form>
+  
+
+      </div>
+      
+</div>
+
+</div>
+
+
+
+    
+    

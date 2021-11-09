@@ -1,0 +1,71 @@
+<% layout('layouts/boilerplate') %>
+<div class="contents container">
+    <div class="row d-flex justify-content-center ">
+        <h1 class="text-center" style="background-color: #f7aa30b2; color:white;">Edit</h1>
+        <div class="col-md-6 p-3">
+            <form action="/Blog/<%=blog._id%>?_method=PUT" method="post" novalidate class= "validated-form" enctype="multipart/form-data">
+
+                <div>
+                    <label for="title" class="form-label">Title:</label>
+                <input type="text" id="title" name="title"  class="form-control" value="<%=blog.title%>"><br>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div>
+                    <label for="image" class="form-label">Add Images:</label>
+                     <input type="file" name="image" id="image" multiple>
+                     <div class="valid-feedback">
+                        Looks good!
+                      </div>
+    
+                </div>
+    
+                <div>
+                    <label for="info" class="form-label">More Details:</label>
+                    <textarea name="info" id="info" cols="30" rows="10" class="form-control" required><%=blog.info%></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                 </div>
+                 <div class="m-2">
+                     <center>
+                    <button type="submit" class="btn btn-success bttn">Update Blog</button>
+                    <a href="/Blog/<%=blog._id%>" class="btn btn-primary bttn">Cancel</a>
+                </center>
+                 </div>
+                
+               
+        </form>
+        
+    </div>
+        
+   </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

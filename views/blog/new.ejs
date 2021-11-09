@@ -1,0 +1,50 @@
+<% layout('layouts/boilerplate') %>
+<div class="contents container">
+    <div class="row d-flex justify-content-center ">
+        <h1 class="text-center" style="background-color: #f7aa30b2; color:white;">Add Details</h1>
+        <div class="col-md-6 p-3">
+            <form action="/Blog" method="POST" novalidate class= "validated-form" enctype="multipart/form-data">
+    
+                <div>
+                    <label for="title" class="form-label">Title:</label>
+                <input type="text" id="title" name="title"  class="form-control" required><br>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div>
+                    <input type="file" name="image" id="">
+                     <div class="valid-feedback">
+                        Looks good!
+                      </div>
+
+                </div>
+
+                <div class="my-2">
+                    <label for="info" class="form-label">More Details:</label>
+                    <textarea name="info" id="info" cols="30" rows="10" class="form-control" required></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                 </div>
+                 <div>
+                 <center class="m-2">
+                <button type="submit" class="btn btn-success bttn">Add Blog</button>
+            <a href="/Blog" class="btn btn-primary bttn">Cancel</a>
+        </center>
+    </div>
+        </form>
+    
+
+        </div>
+        
+</div>
+
+  </div>
+
+
+
+
+
+
+
